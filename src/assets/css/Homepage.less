@@ -1,0 +1,84 @@
+.px2px(@name, @px) {
+  @{name}: round(@px / 2) * 1px;
+  [data-dpr="2"] & {
+    @{name}: @px * 1px;
+  } // for mx3
+  [data-dpr="2.5"] & {
+    @{name}: round(@px * 2.5 / 2) * 1px;
+  } // for 小米note
+  [data-dpr="2.75"] & {
+    @{name}: round(@px * 2.75 / 2) * 1px;
+  }
+  [data-dpr="3"] & {
+    @{name}: round(@px / 2 * 3) * 1px
+  } // for 三星note4
+  [data-dpr="4"] & {
+    @{name}: @px * 2px;
+  }
+}
+
+.content_head {
+  width: 10rem;
+  min-height: 8rem;
+}
+
+.content_head .title {
+  width: 100%;
+  height: .9rem;
+  background: #fff;
+  color: #3e495e;
+  .px2px(font-size, 36px);
+  box-sizing: border-box;
+}
+
+.content_head .title h3 {
+  width: 100%;
+  box-sizing: border-box;
+  height: .9rem;
+  line-height: .9rem;
+  text-align: center;
+  border-bottom: 1px solid #efeeee;
+}
+
+.content_head .contet_head_time {
+  width: 10rem;
+  box-sizing: border-box;
+  min-height: 2.4rem;
+  background: #fff;
+  padding-top: .4rem;
+  padding-left: .4rem;
+  padding-bottom: .2rem;
+  padding-right: 1.333333rem;
+}
+
+.content_head .contet_head_time .content_data {
+  .px2px(font-size, 36px);
+  font-family: PingFangSC-Regular;
+  color: #000;
+}
+
+.content_head .contet_head_time .content_txtone {
+  .px2px(font-size, 25px);
+  color: #6a6a6a;
+}
+
+.content_head .swiper-container {
+  width: 10rem;
+  height: 9.5rem;
+}
+
+.content_head .swiper-container .videoplay {
+  width:10rem;
+  height:9.5rem;
+  padding-top: .3rem;
+  padding-left: .32rem;
+  padding-right: .32rem;
+  box-sizing: border-box;
+}
+
+.content_head .swiper-container .videoplay img {
+  width: 100%;
+  height: 9.1rem;
+  border-radius: 10px;
+
+}

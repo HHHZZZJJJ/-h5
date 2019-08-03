@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="maximum-scale=1,minimum-scale=1,initial-scale=1,user-scalable=no,width=device-width">
+  <!-- 去掉edge下划线 -->
+  <meta name="format-detection" content="telephone=no">
+  <!-- 安卓手机强制设置成竖屏 -->
+  <!-- <meta name="msapplication-tap-highlight" content="no">
+  <meta name="screen-orientation" content="portrait">
+  <meta name="x5-orientation" content="portrait">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="Pragma" content="no-cache" /> -->
+  <script type="text/javascript" src="./static/js/flexible.js"></script>
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- 引入腾讯地图 -->
+  <!-- <script src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script> -->
+  <!-- <script charset="utf-8" src="http://map.qq.com/api/js?key=PNWBZ-UEX34-72IU6-X2APF-5EWDH-JLBVJ"></script> -->
+  <script type="text/javascript">
+  var ModalHelper = (function(bodyCls) {
+    var scrollTop;
+    return {
+      afterOpen: function() {
+        scrollTop = document.scrollingElement.scrollTop;
+        document.body.classList.add(bodyCls);
+        document.body.style.top = -scrollTop + 'rem';
+      },
+      beforeClose: function() {
+        document.body.classList.remove(bodyCls);
+        // scrollTop lost after set position:fixed, restore it back.
+        document.scrollingElement.scrollTop = scrollTop;
+      }
+    };
+  })('modal-open');
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,321 @@
+.px2px(@name, @px) {
+  @{name}: round(@px / 2) * 1px;
+  [data-dpr="2"] & {
+    @{name}: @px * 1px;
+  } // for mx3
+  [data-dpr="2.5"] & {
+    @{name}: round(@px * 2.5 / 2) * 1px;
+  } // for 小米note
+  [data-dpr="2.75"] & {
+    @{name}: round(@px * 2.75 / 2) * 1px;
+  }
+  [data-dpr="3"] & {
+    @{name}: round(@px / 2 * 3) * 1px
+  } // for 三星note4
+  [data-dpr="4"] & {
+    @{name}: @px * 2px;
+  }
+}
+
+.xiaoai {
+  width: 10rem;
+  height: 100%;
+  margin: 0 auto;
+}
+.xiaoai .title {
+  position: relative;
+  width: 10rem;
+  height: 1.8rem;
+}
+//遮罩层
+.xiaoai .title .mask_top {
+  width: 10rem;
+  height: 1.8rem;
+  background: black;
+  opacity: 0.5 !important;
+  position: absolute;
+  z-index: 10000;
+
+}
+// .xiaoai .title .mask_top .mask {
+//   height: 1.8rem;
+//   position: relative;
+  
+// }
+.xiaoai .title .mask_top img {
+  width: 1.386667rem;
+  height: 1.386667rem;
+  position: absolute;
+  left: .373333rem;
+  top: .3rem;
+  z-index: 10000;
+}
+// .xiaoai .carmode {
+//   width: 10rem;
+//   min-height: 15.85rem;
+//   position: relative;
+
+// }
+// .xiaoai .carmode .loding {
+//   width: 1.5rem;
+//   height: 1.5rem;
+//   position: absolute;
+//   left: 50%;
+//   top: 50%;
+//   margin-left: -.725rem;
+//   margin-top: -.725rem;
+//   z-index: 10;
+// }
+// .xiaoai .carmode .loding img {
+//   width: 1.5rem;
+//   height: 1.5rem;
+
+// }
+
+.xiaoai .carloading {
+  width: 1.3rem;
+  height: 1.3rem;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -.5rem;
+  margin-left: -.5rem;
+  z-index: 1000;
+  border-radius: 5px;
+}
+
+.xiaoai .carloading img {
+  width: 100%;
+  height: 100%;
+}
+
+.xiaoai .footer-head {
+  width: 10rem;
+  height:4.4rem;
+  position: relative;
+  background: #fff;
+}
+
+.xiaoai .footer-head .picfooter {
+  width: 100%;
+  height: 1.333333rem;
+  position: relative;
+  margin-bottom: .266667rem;
+  background: #f7f7f7;
+}
+
+.xiaoai .footer-head img {
+  position: absolute;
+  width: 1.45rem;
+  height: 1.45rem;
+  left: .4rem;
+  top: 0rem;
+}
+
+.xiaoai .footer-head .speak {
+  width: 7.6rem;
+  box-shadow: 0 2px 7px 0 #E3E7F0;
+  border-radius: 9px 9px 9px 0;
+  position: absolute;
+  top: .2rem;
+  left: 1.933333rem;
+  .px2px(font-size, 30px);
+}
+
+.xiaoai .footer-head .speak .contennt_dialoguetxt_js_cue {
+  width: 7.6rem;
+  min-height: 1.013333rem;
+  position: absolute;
+  bottom: -1.1rem;
+  left: 0rem;
+  background: #FFFFFF;
+  box-shadow: 0 2px 7px 0 #E3E7F0;
+  border-radius: 9px 9px 9px 0;
+  color: #222222;
+  line-height: .48rem;
+  box-sizing: border-box;
+  padding: .266667rem .106667rem;
+  z-index: 5;
+}
+
+.xiaoai .footer-head .tab-option {
+  width: 100%;
+  height: 1.45rem;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  box-sizing: border-box;
+}
+
+.xiaoai .footer-head .tab-option .tabs {
+  box-sizing: border-box;
+  width: 100%;
+  height: .72rem;
+  float: left;
+  white-space: nowrap;
+  position: absolute;
+  top: .25rem;
+}
+
+.xiaoai .footer-head .tab-option .tabs .mini-tabs {
+  min-width: 1.786667rem;
+  display: inline-block;
+  height: .72rem;
+  line-height: .72rem;
+  padding-left: .2rem;
+  padding-right: .2rem;
+  margin-left: .266667rem;
+  margin-top: .08rem;
+  background: #f4f4f4;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+  color: #333333;
+  .px2px(font-size, 24px);
+  box-sizing: border-box;
+  position: relative;
+
+}
+.xiaoai .footer-head .tab-option .tabs .mini-tabs .yuandian {
+  width: .133333rem;
+  height: .133333rem;
+  border-radius: 50%;
+  background:  #E7336D;
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 0;
+}
+
+.xiaoai .footer-head .tab-option .tabs .mini-tabs:last-child {
+  margin-right: .25rem;
+}
+
+
+.xiaoai .footer_menu {
+  width: 10rem;
+  height: 10rem;
+  position: fixed;
+  bottom: -.5rem;
+  background: #fff;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+.xiaoai .footer_menu .x_close {
+  width: 100%;
+  height: 1.2rem;
+  position: relative;
+}
+
+.xiaoai .footer_menu .x_close img {
+  width: .533333rem;
+  height: .533333rem;
+  position: absolute;
+  left: 9rem;
+  top: .4rem;
+}
+
+.xiaoai .footer_menu .fmenu_one {
+  width: 9rem;
+  height: 4.8rem;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: .5rem;
+}
+
+.xiaoai .footer_menu .fmenu_one .picbox {
+  float: left;
+  width: 33%;
+  height: 2.4rem;
+  position: relative;
+  margin-bottom: .7rem;
+}
+
+.xiaoai .footer_menu .fmenu_one .picbox img {
+  position: absolute;
+  width: 1.6rem;
+  height: 1.6rem;
+  left: 50%;
+  margin-left: -.8rem;
+}
+
+.xiaoai .footer_menu .fmenu_one .picbox .spanid1 {
+  position: absolute;
+  width: 1.6rem;
+  height: 1.6rem;
+  left: 50%;
+  margin-left: -.8rem;
+  text-align: center;
+  top: 2.1rem;
+}
+
+.xiaoai .input_list {
+  width: 10rem;
+  height: 1.4rem;
+  position: fixed;
+  bottom: 0rem;
+  background: #fff;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+.xiaoai .input_list .keys {
+  width: .9rem;
+  height: .9rem;
+  position: absolute;
+  left: .3rem;
+  bottom: .25rem;
+}
+
+.xiaoai .input_list .voice_left {
+  width: 7.093333rem;
+  height: 1.066667rem;
+  border: 1px solid #eae4e4;
+  border-radius: 6px;
+  position: absolute;
+  left: 1.48rem;
+  bottom: .15rem;
+  box-sizing: border-box;
+}
+
+.xiaoai .input_list .buttom_img {
+  width: .8rem;
+  height: .8rem;
+  position: absolute;
+  left: 8.9rem;
+  bottom: .32rem;
+}
+
+.xiaoai .input_list .btn_sub {
+  width: 1.1rem;
+  height: .9rem;
+  position: absolute;
+  left: 8.79rem;
+  bottom: .25rem;
+  margin: 0;
+  padding: 0;
+  border: 1px solid transparent;
+  outline: none;
+  background: #C1D7FF;
+  color: #fff;
+  border-radius: 6px;
+}
+.xiaoai .input_list .btn_subs {
+  width: 1.1rem;
+  height: .9rem;
+  position: absolute;
+  left: 8.79rem;
+  bottom: .25rem;
+  margin: 0;
+  padding: 0;
+  border: 1px solid transparent;
+  outline: none;
+  background: #307AFF;;
+  color: #fff;
+  border-radius: 6px;
+}
+
