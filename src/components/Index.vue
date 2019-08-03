@@ -505,8 +505,8 @@ export default {
     },
     websocketclose: function(e) {
       //关闭
-      // console.log("WebSocket关闭");
-      // console.log(this.websock.readyState);
+      console.log("WebSocket关闭");
+      console.log(this.websock.readyState);
 
     },
     websocketerror: function(e) {
